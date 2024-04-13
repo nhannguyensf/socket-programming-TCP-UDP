@@ -8,7 +8,7 @@ serverPort = 12000
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 message = None
 while message != '!q':  # Loop until the user types '!q'
-    message = input('Input lowercase sentence: ')  # Get user input
+    message = input('Input a sentence you want to reverse: ')  # Get user input
     if message == '!q':
         break  # Exit the loop before sending '!q' to the server
     clientSocket.sendto(message.encode(), (serverName, serverPort))
